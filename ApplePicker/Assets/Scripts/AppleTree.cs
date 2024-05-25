@@ -11,9 +11,15 @@ public class AppleTree : MonoBehaviour
     public float chanceToChangeDirections = 0.1f; //≤мов≥рн≥сть зм≥ни напр€мку
     public float secondsBetweenAppleDrops = 1f; //„астота скиданн€ €блук
 
+    //Use this to change the hierarchy of the GameObject siblings
+    int m_IndexNumber;
     // Start is called before the first frame update
     void Start()
     {
+        //2 секунду
+        m_IndexNumber = 1;
+        transform.SetSiblingIndex(m_IndexNumber);
+
         Invoke(nameof(DropApple), 2f);
     }
 
